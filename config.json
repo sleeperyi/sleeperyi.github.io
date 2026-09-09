@@ -10,7 +10,7 @@
     "startSite":"09/9/2026",
     "navLinks": [
     { "name": "首页", "url": "/" },
-    { "name": "标签", "url": "/tags/" },  // 添加这一行
+    { "name": "标签", "url": "/tags/" },  
     { "name": "关于", "url": "/about/" }
   ]
 
