@@ -2,5 +2,9 @@
     "title":"sleeperyi的博客",
     "subTitle":"学习记录",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    "GMEEK_VERSION":"last"
+    "GMEEK_VERSION":"last",
+    "onePageListNum":15,
+    "UTC":8,
+    "i18n":"CN",
+    "startSite":"09/9/2026"
 }
