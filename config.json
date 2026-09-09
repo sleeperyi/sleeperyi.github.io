@@ -7,13 +7,5 @@
     "UTC":8,
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "i18n":"CN",
-    "startSite":"09/9/2026",
-    "navLinks": [
-    { "name": "首页", "url": "/" },
-    { "name": "标签", "url": "/tags/" },  
-    { "name": "关于", "url": "/about/" }
-  ]
-
-    "backgroundUrl": "https://imgs.aixifan.com/newUpload/74239842_e0f8aebb9e684799bbf267b248d0112a.jpeg",
-    "backgroundOpacity": 0.6
+    "startSite":"09/9/2026"
 }
