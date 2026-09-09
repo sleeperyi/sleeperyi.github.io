@@ -5,6 +5,7 @@
     "GMEEK_VERSION":"last",
     "onePageListNum":15,
     "UTC":8,
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "i18n":"CN",
     "startSite":"09/9/2026"
 }
