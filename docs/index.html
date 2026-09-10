@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     
-    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+    <link rel="icon" href="___图标地址(可留空则用头像)___"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="学习记录">
-<meta property="og:title" content="sleeperyi的博客">
+<meta property="og:title" content="sleeperyi的大图书馆">
 <meta property="og:description" content="学习记录">
 <meta property="og:type" content="blog">
 <meta property="og:url" content="https://sleeperyi.github.io">
-<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
-<title>sleeperyi的博客</title>
+<meta property="og:image" content="https://kkimgs.yisou.com/ims?kt=url&at=ori&key=...FULL_AVATAR_URL_HERE...">
+<title>sleeperyi的大图书馆</title>
 
 </head>
 <style>
@@ -50,20 +50,24 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     .LabelTime{display:none;}
 }
 </style>
-
+<style>body{background-image:url('https://kkimgs.yisou.com/ims?...');}</style>
 
 
 <body>
     <div id="header">
 <div class="title-left">
-    <img src="https://github.githubassets.com/favicons/favicon.svg" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">sleeperyi的博客</a></div>
+    <img src="https://kkimgs.yisou.com/ims?kt=url&at=ori&key=...FULL_AVATAR_URL_HERE..." class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">sleeperyi</a></div>
 <div class="title-right">
     <a href="https://sleeperyi.github.io/tag.html" id="buttonSearch" class="btn btn-invisible circle" title="搜索">
         <svg class="octicon" width="16" height="16" >
             <path id="pathSearch" fill-rule="evenodd"></path>
         </svg>
     </a>
-    
+    <a href="https://github.com/sleeperyi" class="btn btn-invisible circle" title="github" target="_blank">
+        <svg class="octicon" width="16" height="16" >
+            <path id="github" fill-rule="evenodd"></path>
+        </svg>
+    </a>
     
     <a href="https://sleeperyi.github.io/rss.xml" target="_blank" id="buttonRSS" class="btn btn-invisible circle" title="RSS">
         <svg class="octicon" width="16" height="16" >
@@ -80,21 +84,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div style="margin-bottom: 16px;">学习记录</div>
 <nav class="SideNav border">
-<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/9.9-ri-ji.html">
+<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/shu-zi-dian-lu.html">
     <div class="d-flex flex-items-center">
         <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
-        <span class="listTitle">9.9日记</span>
+        <span class="listTitle">数字电路</span>
     </div>
     <div class="listLabels">
         
-        <span class="Label LabelName" style="background-color:#ef6441"><object><a style="color:#fff" href="tag.html#日记">日记</a></object></span>
+        <span class="Label LabelName" style="background-color:#ef6441"><object><a style="color:#fff" href="tag.html#学习">学习</a></object></span>
         <span class="Label LabelTime" style="background-color:#1f883d">2026-09-09</span>
     </div>
 </a>
 </nav>
 </div>
-    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://sleeperyi.github.io">sleeperyi的博客</a></div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://sleeperyi.github.io">sleeperyi的大图书馆</a></div>
 <div id="footer2">
     <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
 </div>
@@ -103,8 +107,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 var now=new Date();
 document.getElementById("copyrightYear").innerHTML=now.getFullYear();
 
-if("09/9/2026"!=""){
-    var startSite=new Date("09/9/2026");
+if("09/09/2026"!=""){
+    var startSite=new Date("09/09/2026");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
     document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
@@ -157,6 +161,7 @@ for(var i=0;i<iconPost.length;i++){
 }
 
 
+document.getElementById("github").setAttribute("d",value=IconList["github"]);
 
 
 </script>
