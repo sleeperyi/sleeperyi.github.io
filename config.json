@@ -13,6 +13,6 @@
     "github": "https://github.com/sleeperyi"
   },
   "bottomText": "© 2026 sleeperyi · Powered by Gmeek",
-  "indexStyle": "<style>html,body{height:100%;}body{background-image:url('https://i0.hdslb.com/bfs/article/d7a40082c0c1b977cb75be313361e16565e3137d.jpg@1256w_1586h_!web-article-pic.webp');background-size:cover;background-position:center center;background-repeat:no-repeat;background-attachment:fixed;background-color:#111;} .avatar img{width:120px;height:120px;object-fit:cover;border-radius:50%;} @media(max-width:768px){ body{background-attachment:scroll;background-position:top center;} }</style>",
+  <style>html{height:100%;}body{min-height:100%;background:transparent;}body::before{content:'';position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;background-image:url('https://i0.hdslb.com/bfs/article/d7a40082c0c1b977cb75be313361e16565e3137d.jpg@1256w_1586h_!web-article-pic.webp');background-size:cover;background-position:center center;background-repeat:no-repeat;background-color:#111;}.avatar{width:120px;height:120px;object-fit:cover;border-radius:50%;}</style>
   "script": "<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>"
 }
