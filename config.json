@@ -1,4 +1,4 @@
-{
+
 {
     "title":"sleeperyi的大图书馆",
     "subTitle":"学习记录",
@@ -14,4 +14,4 @@
     "indexStyle":"<style>body{background-image:url('https://kkimgs.yisou.com/ims?kt=url&at=smstruct&key=aHR0cDovL2kwLmhkc2xiLmNvbS9iZnMvYXJjaGl2ZS9iMDEzNDBkZjA5OTE4MjRjYzFlOGFmZTQ4NmUzOTFkYWRjODIwYzdjLmpwZ0Aud2VicA==&sign=yx:grdqqyenpInNGLjA2uqdfv7z9GU=&tv=400_400');background-size:cover;background-attachment:fixed;}article{background:rgba(255,255,255,0.9);border-radius:12px;}</style>",
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>"
 }
-}
+
