@@ -2,7 +2,7 @@
   "title": "sleeperyi的大图书馆",
   "subTitle": "我的博客",
   "displayTitle": "我的博客",
-  "avatarUrl": "https://kkimgs.yisou.com/ims?kt=url&at=ori&key=aHR0cHM6Ly9pMC5oZHNsYi5jb20vYmZzL2FydGljbGUvOGNjOThiNDNkZWY1NzFlMzkxMmRjNmM4NjY2YzU0OTkyZjQxMjI3My5qcGdALndlYnA=&sign=yx:dwcJzr5WrOGOVmD9oF5N9Whx-MI=&tv=0_0",
+  "avatarUrl": "https://kkimgs.yisou.com/ims?kt=url&at=ori&key=aHR0cHM6Ly9pMC5oZHNsYi5jb20vYmZzL2FydGljbGUvOGNjOThiNDNkZWY1NzFlMzkxMmRjNmM4NjY2YzU0OTkyZjQxMjI3My5qcGdALndlYnA=&sign=yx:dwcJzr5WrOGOV[...]",
   "faviconUrl": "___图标地址(可留空则用头像)___",
   "GMEEK_VERSION": "last",
   "onePageListNum": 10,
@@ -13,6 +13,6 @@
     "github": "https://github.com/sleeperyi"
   },
   "bottomText": "© 2026 sleeperyi · Powered by Gmeek",
-  "indexStyle": "<style>html,body{height:100%;min-height:100vh;margin:0;padding:0;}body{background-color:#111;}body::before{content:'';position:fixed;inset:0;z-index:-1;background-image:url('https://i0.hdslb.com/bfs/article/d7a40082c0c1b977cb75be313361e16565e3137d.jpg');background-size:cover;background-position:center center;background-repeat:no-repeat;will-change:transform;-webkit-backface-visibility:hidden;} /* 避免主体遮挡背景 */ .main, .home-main, .container, .site-wrapper{background-color:transparent !important;} @media (max-width:768px){ body::before{background-attachment:scroll;} }</style>",
+  "indexStyle": "<style>html,body{height:100%;min-height:100vh;margin:0;padding:0;}body{background-image:url('https://i0.hdslb.com/bfs/article/d7a40082c0c1b977cb75be313361e16565e3137d.jpg@1256w_1586h_!web-article-pic.webp');background-size:cover;background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-color:transparent;} .avatar img{width:120px;height:120px;object-fit:cover;border-radius:50%;}</style>",
   "script": "<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>"
 }
