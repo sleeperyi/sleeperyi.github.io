@@ -50,7 +50,37 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     .LabelTime{display:none;}
 }
 </style>
-<style>html::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background-image:url('/images/bg.webp');background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#111}#header,.SideNav,#footer{background-color:rgba(255,255,255,0.85)}.SideNav.border{border-color:rgba(0,0,0,0.1)}.SideNav-item:hover{background-color:rgba(255,255,255,0.6)}.avatar{width:120px;height:120px;object-fit:cover;border-radius:50%}</style>
+<style>
+  /* page background image (kept behind content) */
+  html::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background-image:url('/images/bg.webp');background-size:cover;background-position:center;filter:brightness(0.95);}
+
+  /* make main content areas translucent so the background shows through, keep text readable */
+  .container, .main, .content, .post-list, .posts, .post-card, .card, .post, .article, .page-main {
+    background: rgba(255,255,255,0.78) !important;
+    -webkit-backdrop-filter: blur(6px) saturate(120%) !important;
+    backdrop-filter: blur(6px) saturate(120%) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+  }
+
+  /* headers/sidebars slightly more opaque for contrast */
+  header, .site-header, .nav, .sidebar, footer, .site-footer {
+    background: rgba(255,255,255,0.88) !important;
+  }
+
+  /* dark mode support: use translucent dark backgrounds */
+  @media (prefers-color-scheme: dark) {
+    .container, .main, .content, .post-list, .posts, .post-card, .card, .post, .article, .page-main {
+      background: rgba(0,0,0,0.5) !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45) !important;
+    }
+    header, .site-header, .nav, .sidebar, footer, .site-footer {
+      background: rgba(0,0,0,0.6) !important;
+    }
+  }
+
+  /* Make sure the fixed background stays behind everything */
+  html::before{pointer-events:none;}
+</style>
 
 
 <body>
