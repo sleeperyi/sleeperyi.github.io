@@ -52,34 +52,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </style>
 <style>
   /* page background image (kept behind content) */
-  html::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background-image:url('/images/bg.webp');background-size:cover;background-position:center;filter:brightness(0.95);}
-
-  /* make main content areas translucent so the background shows through, keep text readable */
-  .container, .main, .content, .post-list, .posts, .post-card, .card, .post, .article, .page-main {
-    background: rgba(255,255,255,0.78) !important;
-    -webkit-backdrop-filter: blur(6px) saturate(120%) !important;
-    backdrop-filter: blur(6px) saturate(120%) !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+  html::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background-image:url('/images/bg.webp');background-size:cover;background-position:center center;background-repeat:no-repeat;opacity:0.95;}
+  /* make main content wrappers transparent so the background shows through */
+  body, .site, .container, .main, .content, .post-list, .post, .article, .post-item, .card, .post-card, .index-main {
+    background-color: transparent !important;
   }
-
-  /* headers/sidebars slightly more opaque for contrast */
-  header, .site-header, .nav, .sidebar, footer, .site-footer {
-    background: rgba(255,255,255,0.88) !important;
+  /* style article cards and lists with a translucent backdrop for readability */
+  .post, .post-item, .card, .post-card, .article, .list-item {
+    background-color: rgba(255,255,255,0.72) !important;
+    color: #111 !important;
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   }
-
-  /* dark mode support: use translucent dark backgrounds */
+  /* dark mode support */
   @media (prefers-color-scheme: dark) {
-    .container, .main, .content, .post-list, .posts, .post-card, .card, .post, .article, .page-main {
-      background: rgba(0,0,0,0.5) !important;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.45) !important;
-    }
-    header, .site-header, .nav, .sidebar, footer, .site-footer {
-      background: rgba(0,0,0,0.6) !important;
+    .post, .post-item, .card, .post-card, .article, .list-item {
+      background-color: rgba(6,6,6,0.5) !important;
+      color: #eee !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
     }
   }
-
-  /* Make sure the fixed background stays behind everything */
-  html::before{pointer-events:none;}
+  /* ensure links and text remain readable */
+  .post a, .article a { color: #1a73e8 !important; }
+  /* disable any full-opaque overlays */
+  .index-overlay, .home-bg-overlay, .bg-overlay { background-color: transparent !important; opacity: 1 !important; }
 </style>
 
 
