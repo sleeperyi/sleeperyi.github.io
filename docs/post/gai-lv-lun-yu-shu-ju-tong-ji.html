@@ -10,9 +10,21 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 概率论与数理统计。">
+<meta name="description" content="# 概率论与数理统计
+
+
+## 第一章：绪论 (Introduction)
+
+### 核心概念与关系
+- 概率论 (Probability)：从模型出发，预测可能的数据（Model to Data）。">
 <meta property="og:title" content="概率论与数据统计">
-<meta property="og:description" content="# 概率论与数理统计。">
+<meta property="og:description" content="# 概率论与数理统计
+
+
+## 第一章：绪论 (Introduction)
+
+### 核心概念与关系
+- 概率论 (Probability)：从模型出发，预测可能的数据（Model to Data）。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://sleeperyi.github.io/post/gai-lv-lun-yu-shu-ju-tong-ji.html">
 <meta property="og:image" content="/images/ava.webp">
@@ -73,7 +85,80 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>概率论与数理统计</h1></div>
+<div class="markdown-body" id="postBody"><h1>概率论与数理统计</h1>
+<h2>第一章：绪论 (Introduction)</h2>
+<h3>核心概念与关系</h3>
+<ul>
+<li>概率论 (Probability)：从模型出发，预测可能的数据（Model to Data）。</li>
+<li>数理统计 (Mathematical Statistics)：从数据出发，推断模型的特征（Data to Model）。</li>
+<li>核心思想：单个结果的不确定性（Randomness）在大量试验中会呈现出可预测的聚合规律（Aggregate Regularity）。</li>
+</ul>
+<h4>概率论的发展简史</h4>
+<p>起源：始于博弈与风险（Cardano, Pascal, Fermat）。<br>
+科学化：进入天文学、测量误差分析（De Moivre, Laplace）。<br>
+公理化：1933年 Kolmogorov 建立了概率论的公理体系（样本空间 Omega、事件集合 mathcal{F}、概率测度 P），使其成为严谨的数学分支。</p>
+<h4>现代工程与AI中的应用</h4>
+<p>概率论是处理不确定性的基石，广泛应用于：<br>
+1.生成式AI (Generative AI)：预测下一个Token的概率分布（如 P(X_{t+1}|X_1...X_t)）。<br>
+2.自动驾驶：基于传感器数据（LiDAR, Radar）估计障碍物存在的概率 P(H|D)。<br>
+3.医疗AI：利用贝叶斯规则结合先验概率（患病率）解读检测结果，避免“基础概率谬误”。<br>
+推荐系统：平衡“利用”（Exploitation）与“探索”（Exploration）。</p>
+<h2>第二章：概率论导论 (Introduction to Probability Theory)</h2>
+<h3>基本定义</h3>
+<ul>
+<li>实验 (Experiment)：产生结果的过程。</li>
+<li>样本空间 (Sample Space, S)：所有可能结果的集合。<br>
+事件 (Event)：样本空间的子集。</li>
+<li>随机变量 (Random Variable, RV)：将样本空间中的结果映射为实数值的函数。</li>
+</ul>
+<h4>概率公理与性质</h4>
+<p>对于任意事件 A, B：<br>
+非负性：P(A) ge 0<br>
+归一性：P(S) = 1<br>
+可列可加性：若 A cap B = emptyset，则 P(A cup B) = P(A) + P(B)。<br>
+加法公式：P(A cup B) = P(A) + P(B) - P(A cap B)。</p>
+<h4>计数基础 (Combinatorics)</h4>
+<p>用于计算古典概型（等可能结果）：<br>
+排列 (Permutations)：n 个不同元素的排列数为 n!。<br>
+组合 (Combinations)：从 n 个中选 k 个（不考虑顺序）：<br>
+binom{n}{k} = frac{n!}{k!(n-k)!}<br>
+生日悖论：23人中至少有两人同一天生日的概率超过 50%。</p>
+<h4>条件概率与贝叶斯定理</h4>
+<p>条件概率：已知 B 发生的情况下 A 发生的概率。<br>
+P(A|B) = frac{P(A cap B)}{P(B)}, quad P(B) &gt; 0<br>
+独立性 (Independence)：<br>
+若 P(A cap B) = P(A)P(B)，则 A 与 B 独立。<br>
+注意：两两独立不一定意味着相互独立。<br>
+全概率公式：若 B_i 构成完备事件组，则 P(A) = sum P(A|B_i)P(B_i)。<br>
+贝叶斯定理 (Bayes' Theorem)：<br>
+P(B_i|A) = frac{P(A|B_i)P(B_i)}{sum_j P(A|B_j)P(B_j)}<br>
+先验概率 (Prior)：P(B_i)<br>
+后验概率 (Posterior)：P(B_i|A)</p>
+<h4>离散随机变量及其分布</h4>
+<ul>
+<li>
+<p>随机变量 X 的概率质量函数 (PMF) 定义为 P_X(x) = P(X=x)。<br>
+分布名称   描述   PMF 公式   参数说明<br>
+伯努利 (Bernoulli)   单次试验，结果0或1   P(1)=p, P(0)=1-p   p: 成功概率</p>
+</li>
+<li>
+<p>二项 (Binomial)   n 次独立伯努利试验中成功的次数   binom{n}{k}p^k(1-p)^{n-k}   n: 试验次数</p>
+</li>
+<li>
+<p>泊松 (Poisson)   单位时间内随机事件发生的次数 (二项分布的极限)   frac{lambda^k}{k!}e^{-lambda}   lambda: 平均发生率</p>
+</li>
+<li>
+<p>几何 (Geometric)   首次成功前失败的次数   (1-p)^k p   k=0,1,2...</p>
+</li>
+</ul>
+<h4>工程应用案例</h4>
+<ul>
+<li>光通信系统：<br>
+利用泊松分布建模光子计数（信号为1或0时的电子数）。<br>
+使用 MAP (最大后验概率) 准则进行判决：比较 P(0 text{ sent} | X=k) 与 P(1 text{ sent} | X=k)。</li>
+<li>医疗检测：<br>
+即使检测灵敏度高，若疾病基础概率 (Base Rate) 极低，阳性结果中真阳性的比例可能依然很低（需警惕假阳性）。</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;">© 2026 sleeperyi · Powered by Gmeek</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
