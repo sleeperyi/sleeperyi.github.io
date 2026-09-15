@@ -7,6 +7,7 @@
   "onePageListNum": 10,
   "UTC": 8,
   "i18n": "CN",
+  "math":true,
   "startSite": "09/09/2026",
   "exlink": {
     "github": "https://github.com/sleeperyi"
