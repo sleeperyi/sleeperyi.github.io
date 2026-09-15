@@ -18,7 +18,7 @@
 
 1. 什么是信号与系统
 
-· 信号：消息和信息的载体，是传递信息的工具（如光、电波、声音等）。">
+- 信号：消息和信息的载体，是传递信息的工具（如光、电波、声音等）。">
 <meta property="og:title" content="信号与系统">
 <meta property="og:description" content="# 信号，系统
 
@@ -28,7 +28,7 @@
 
 1. 什么是信号与系统
 
-· 信号：消息和信息的载体，是传递信息的工具（如光、电波、声音等）。">
+- 信号：消息和信息的载体，是传递信息的工具（如光、电波、声音等）。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://sleeperyi.github.io/post/xin-hao-yu-xi-tong.html">
 <meta property="og:image" content="/images/ava.webp">
@@ -95,40 +95,52 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ol>
 <li>什么是信号与系统</li>
 </ol>
-<p>· 信号：消息和信息的载体，是传递信息的工具（如光、电波、声音等）。<br>
-· 系统：由相互作用和依赖的若干事物组成的、具有特定功能的整体。具有整体性、关联性。<br>
-· 关系：信号通过系统产生输入-输出关系。</p>
+<ul>
+<li>信号：消息和信息的载体，是传递信息的工具（如光、电波、声音等）。</li>
+<li>系统：由相互作用和依赖的若干事物组成的、具有特定功能的整体。具有整体性、关联性。</li>
+<li>关系：信号通过系统产生输入-输出关系。</li>
+</ul>
 <ol start="2">
 <li>信号的分类</li>
 </ol>
-<p>· 确定性信号 vs. 随机信号：能否用确定性函数表示。<br>
-· 连续时间信号 vs. 离散时间信号：自变量是否连续。<br>
-· 模拟信号 vs. 数字信号：自变量和因变量是否均连续/离散（采样+量化）。</p>
+<ul>
+<li>确定性信号 vs. 随机信号：能否用确定性函数表示。</li>
+<li>连续时间信号 vs. 离散时间信号：自变量是否连续。</li>
+<li>模拟信号 vs. 数字信号：自变量和因变量是否均连续/离散（采样+量化）。</li>
+</ul>
 <ol start="3">
 <li>信号的运算与变换</li>
 </ol>
-<p>· 时移： x(t \pm t_0) （左加右减）<br>
-· 时间反转： x(-t) （反褶）<br>
-· 尺度变换： x(at) （ a&gt;1 压缩， 0&lt;a&lt;1 扩展）<br>
-· 组合变换： f(-at \pm b) ，口诀“先翻转再展缩后平移”。<br>
-· 奇偶分解：任何信号可分解为偶分量与奇分量之和。<br>
-· 周期信号： f(t) = f(t + mT) ，离散周期信号需满足  \omega_0 N = 2\pi m  且  N  为整数。</p>
+<ul>
+<li>时移： x(t \pm t_0) （左加右减）</li>
+<li>时间反转： x(-t) （反褶）</li>
+<li>尺度变换： x(at) （ a&gt;1 压缩， 0&lt;a&lt;1 扩展）</li>
+<li>组合变换： f(-at \pm b) ，口诀“先翻转再展缩后平移”。</li>
+<li>奇偶分解：任何信号可分解为偶分量与奇分量之和。</li>
+<li>周期信号： f(t) = f(t + mT) ，离散周期信号需满足  \omega_0 N = 2\pi m  且  N  为整数。</li>
+</ul>
 <h3>典型信号与冲激函数（重点难点）</h3>
 <ol>
 <li>指数与正弦信号</li>
 </ol>
-<p>· 连续时间复指数： e^{st} ， s = \sigma + j\omega<br>
-· 离散时间复指数： e^{(\alpha + j\beta)k}<br>
-· 重要特性：离散时间复指数在频率上具有周期性，低频在  0, 2\pi, 4\pi...  附近，高频在  \pi, 3\pi...  附近。</p>
+<ul>
+<li>连续时间复指数： e^{st} ， s = \sigma + j\omega</li>
+<li>离散时间复指数： e^{(\alpha + j\beta)k}</li>
+<li>重要特性：离散时间复指数在频率上具有周期性，低频在  0, 2\pi, 4\pi...  附近，高频在  \pi, 3\pi...  附近。</li>
+</ul>
 <ol start="2">
 <li>单位冲激与阶跃函数（核心难点）</li>
 </ol>
-<p>· 离散时间： \delta[n] = u[n] - u[n-1] ， u[n] = \sum_{m=-\infty}^{n} \delta[m]<br>
-· 连续时间：<br>
-· 单位阶跃： u(t)<br>
-· 单位冲激： \delta(t) ，狄拉克定义（积分定义、广义函数）<br>
-· 关系： \delta(t) = \frac{du(t)}{dt} ， u(t) = \int_{-\infty}^{t} \delta(\tau) d\tau<br>
-· 冲激函数的性质：</p>
+<ul>
+<li>离散时间： \delta[n] = u[n] - u[n-1] ， u[n] = \sum_{m=-\infty}^{n} \delta[m]</li>
+<li>连续时间：
+<ul>
+<li>单位阶跃： u(t)</li>
+<li>单位冲激： \delta(t) ，狄拉克定义（积分定义、广义函数）</li>
+<li>关系： \delta(t) = \frac{du(t)}{dt} ， u(t) = \int_{-\infty}^{t} \delta(\tau) d\tau</li>
+</ul>
+</li>
+<li>冲激函数的性质：
 <ol>
 <li>抽样性： \int_{-\infty}^{\infty} \delta(t) f(t) dt = f(0)</li>
 <li>奇偶性： \delta(-t) = \delta(t) （偶函数）</li>
@@ -136,6 +148,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>复合函数： \delta[f(t)] = \sum_{i} \frac{1}{|f'(t_i)|} \delta(t-t_i)</li>
 <li>冲激偶： \delta'(t) ， \int \delta'(t) f(t) dt = -f'(0)</li>
 </ol>
+</li>
+</ul>
 <h3>系统的基本性质（重点）</h3>
 <ol>
 <li>系统分类</li>
@@ -144,16 +158,26 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ol start="2">
 <li>关键性质</li>
 </ol>
-<p>· 记忆性：无记忆系统输出仅取决于当前输入；记忆系统输出取决于过去或未来。<br>
-· 可逆性：不同输入产生不同输出。<br>
-· 因果性：输出仅取决于当前及过去输入（非预测性）。<br>
-· 稳定性：有界输入产生有界输出（BIBO）。<br>
-· 时不变性：输入时移导致输出相同时间的时移。若响应中含有显式时间  t ，则为时变系统。<br>
-· 线性：满足叠加性（可加性）和齐次性。判断需从可分解性、零输入线性、零状态线性三方面考察。</p>
+<ul>
+<li>记忆性：无记忆系统输出仅取决于当前输入；记忆系统输出取决于过去或未来。</li>
+<li>可逆性：不同输入产生不同输出。</li>
+<li>因果性：输出仅取决于当前及过去输入（非预测性）。</li>
+<li>稳定性：有界输入产生有界输出（BIBO）。</li>
+<li>时不变性：输入时移导致输出相同时间的时移。若响应中含有显式时间  t ，则为时变系统。</li>
+<li>线性：满足叠加性（可加性）和齐次性。判断需从可分解性、零输入线性、零状态线性三方面考察。</li>
+</ul>
 <h4>重难点</h4>
-<p>类别 内容<br>
-重点 1. 信号的时域变换（时移、反转、尺度）及组合变换 2. 单位冲激函数  \delta(t)  的定义、性质与计算 3. 系统的线性、时不变性、因果性、稳定性的判断 4. 连续与离散时间信号周期性的区别<br>
-难点 1. 冲激函数的严格数学定义（广义函数）及复合函数性质 2. 离散时间复指数信号的周期性条件 3. 线性系统的严格判定（零输入/零状态响应的线性） 4. 时不变系统的判定（区分  y(t-t_0)  与  T[x(t-t_0)] ）</p></div>
+<p>重点</p>
+<ol>
+<li>信号的时域变换（时移、反转、尺度）及组合变换</li>
+<li>单位冲激函数  \delta(t)  的定义、性质与计算</li>
+<li>系统的线性、时不变性、因果性、稳定性的判断 4. 连续与离散时间信号周期性的区别<br>
+难点</li>
+<li>冲激函数的严格数学定义（广义函数）及复合函数性质</li>
+<li>离散时间复指数信号的周期性条件</li>
+<li>线性系统的严格判定（零输入/零状态响应的线性）</li>
+<li>时不变系统的判定（区分  y(t-t_0)  与  T[x(t-t_0)] ）</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;">© 2026 sleeperyi · Powered by Gmeek</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
