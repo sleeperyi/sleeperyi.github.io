@@ -8,15 +8,14 @@
   "UTC": 8,
   "i18n": "CN",
   
-  "math":true,
-  "mathjax":true,
+  "math": true,
+  "mathjax": true,
   
   "startSite": "09/09/2026",
   "exlink": {
     "github": "https://github.com/sleeperyi"
   },
   "bottomText": "© 2026 sleeperyi · Powered by Gmeek",
-  "indexStyle": "<style>\n  /* page background image (kept behind content) */\n  html::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background-image:url('/images/bg.webp')[...]",
-  "script": "<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script>window.MathJax = {tex: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']], packages: ['base','ams']}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script><script src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\" async></script>"
-
+  "indexStyle": "<style>\n  /* simplified safe indexStyle to avoid JSON parsing issues */\n  body { background-color: #f7f7f7; }\n</style>",
+  "script": "<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script>window.MathJax = {tex: {inlineMath: [['$','$'], ['\\\\(','\\\\)']], displayMath: [['$$','$$'], ['\\\\[','\\\\]']], packages: ['base','ams']}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script><script src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' async></script>"
 }
