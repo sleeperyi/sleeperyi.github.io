@@ -112,41 +112,41 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>信号的运算与变换</li>
 </ol>
 <ul>
-<li>时移：$ x(t \pm t_0) $（左加右减）</li>
+<li>时移：左加右减</li>
 <li>时间反转： x(-t) （反褶）</li>
 <li>尺度变换： x(at) （ a&gt;1 压缩， 0&lt;a&lt;1 扩展）</li>
-<li>组合变换： f(-at \pm b) ，口诀“先翻转再展缩后平移”。</li>
-<li>奇偶分解：任何信号可分解为偶分量与奇分量之和。</li>
-<li>周期信号： f(t) = f(t + mT) ，离散周期信号需满足  \omega_0 N = 2\pi m  且  N  为整数。</li>
+<li>组合变换： 口诀“先翻转再展缩后平移”。</li>
+<li>奇偶分解：任何信号可分解为偶分量与奇分量之和。利用f（t）±f（-t）计算</li>
+<li>周期信号： f(t) = f(t + mT) ，离散周期信号需满足  w0/2π=m/N  且  N  为整数。</li>
 </ul>
 <h3>典型信号与冲激函数（重点难点）</h3>
 <ol>
 <li>指数与正弦信号</li>
 </ol>
 <ul>
-<li>连续时间复指数： e^{st} ， s = \sigma + j\omega</li>
-<li>离散时间复指数： e^{(\alpha + j\beta)k}</li>
-<li>重要特性：在连续时间里，频率越高，震荡越快；在离散时间里，频率W0和W0+ 2pi产生的信号完全一样。离散时间复指数在频率上具有周期性，低频在  0, 2\pi, 4\pi...  附近，高频在  \pi, 3\pi...  附近。</li>
+<li>连续时间复指数： e^{st} ， s =i +jw</li>
+<li>离散时间复指数： e^{(i+ jw)k}</li>
+<li>重要特性：在连续时间里，频率越高，震荡越快；在离散时间里，频率W0和W0+ 2pi产生的信号完全一样。离散时间复指数在频率上具有周期性，低频在  0, 2π, 4π附近，高频在 π, 3π...  附近。</li>
 </ul>
 <ol start="2">
 <li>单位冲激与阶跃函数（核心难点）</li>
 </ol>
 <ul>
-<li>离散时间： \delta[n] = u[n] - u[n-1] ， u[n] = \sum_{m=-\infty}^{n} \delta[m]</li>
+<li>离散时间： delta[n] = u[n] - u[n-1] ， u[n] = 求和delta[n]</li>
 <li>连续时间：
 <ul>
 <li>单位阶跃： u(t)</li>
-<li>单位冲激： \delta(t) ，狄拉克定义（积分定义、广义函数）</li>
-<li>关系： \delta(t) = \frac{du(t)}{dt} ， u(t) = \int_{-\infty}^{t} \delta(\tau) d\tau</li>
+<li>单位冲激： delta(t) ，狄拉克定义（积分定义、广义函数）</li>
+<li>关系： delta(t) = du(t）/dt ， u(t) =积分delta(t）</li>
 </ul>
 </li>
 <li>冲激函数的性质：
 <ol>
-<li>抽样性： \int_{-\infty}^{\infty} \delta(t) f(t) dt = f(0)</li>
-<li>奇偶性： \delta(-t) = \delta(t) （偶函数）</li>
-<li>尺度变换： \delta(at) = \frac{1}{|a|} \delta(t)</li>
-<li>复合函数： \delta[f(t)] = \sum_{i} \frac{1}{|f'(t_i)|} \delta(t-t_i)</li>
-<li>冲激偶： \delta'(t) ， \int \delta'(t) f(t) dt = -f'(0)</li>
+<li>抽样性</li>
+<li>奇偶性： delta(-t) = delta(t) （偶函数）</li>
+<li>尺度变换： delta(at) = delta(t) /|a|</li>
+<li>复合函数： delta[f(t)] = delta(t-t_i) /|f'(t_i)|的求和，t_i为f（t）的根</li>
+<li>冲激偶： delta'(t) ， 积分delta'(t) f(t) dt = -f'(0)</li>
 </ol>
 </li>
 </ul>
@@ -163,14 +163,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>可逆性：不同输入产生不同输出。</li>
 <li>因果性：输出仅取决于当前及过去输入（非预测性）。</li>
 <li>稳定性：有界输入产生有界输出（BIBO）。</li>
-<li>时不变性：输入时移导致输出相同时间的时移。若响应中含有显式时间  t ，则为时变系统。</li>
+<li>时不变性：输入时移导致输出相同时间的时移。若响应中含有显式时间  t ，则为时变系统。判断一个系统是否为时不变系统，只需判断当输入激励f(t)变为f(t-t0)时，相应的输出响应y(t)是否也<br>
+由y（t）变为y(t-t0）。由于系统的时不变特性只考虑系统的零状态响应，因此在判断系统的时不变特性时，不涉及系统的初始状态。<br>
+-- 判断一个系统是否为时不变系统时，只需观<br>
+察系统响应y(t)中除了f(t)含有时间变量t<br>
+外，是否还出现任何含有时间t函数。若有，<br>
+则为时变系统。</li>
 <li>线性：满足叠加性（可加性）和齐次性。判断需从可分解性、零输入线性、零状态线性三方面考察。</li>
 </ul>
 <h4>重难点</h4>
 <p>重点</p>
 <ol>
 <li>信号的时域变换（时移、反转、尺度）及组合变换</li>
-<li>单位冲激函数  \delta(t)  的定义、性质与计算</li>
+<li>单位冲激函数  delta(t)  的定义、性质与计算</li>
 <li>系统的线性、时不变性、因果性、稳定性的判断 4. 连续与离散时间信号周期性的区别<br>
 难点</li>
 <li>冲激函数的严格数学定义（广义函数）及复合函数性质</li>
